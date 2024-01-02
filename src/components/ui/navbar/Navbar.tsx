@@ -11,7 +11,7 @@ const navbarItems: INavbarItem[] = [
 
 export const Navbar = () => {
     return (
-        <Nav shouldHideOnScroll className="shadow-md flex items-center">
+        <Nav shouldHideOnScroll className="shadow-md flex items-center bg-black text-white">
             <NavbarBrand>
                 <Link href="/">
                     <p className="font-bold text-inherit">FIGES SPA</p>

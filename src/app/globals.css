@@ -30,3 +30,7 @@ body {
   border-radius: 22% 10% 12% 34% / 48% 25% 24% 52%;
 
 }
+
+.radius-pill {
+  border-radius: 52% 48% 50% 50% / 39% 52% 48% 44%;
+}

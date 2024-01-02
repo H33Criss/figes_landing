@@ -1,4 +1,4 @@
-import { PresentationImage } from "@/components";
+import { LandingPage } from "@/components/home/presentation/LandingPage";
 
 
 export const metadata = {
@@ -9,14 +9,8 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <div className="grid grid-cols-6" >
-      <div className="col-span-3">
-
-      </div>
-      <div className="col-span-3">
-        <PresentationImage />
-
-      </div>
+    <div className="flex flex-col" >
+      <LandingPage />
     </div>
   )
 }

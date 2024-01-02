@@ -6,6 +6,14 @@ const nextConfig = {
                 hostname: 'static.videezy.com',
                 protocol: 'https'
             },
+            {
+                hostname: 'user-images.githubusercontent.com',
+                protocol: 'https'
+            },
+            {
+                hostname: 'www.todoagua.es',
+                protocol: 'https'
+            },
 
         ],
     }
