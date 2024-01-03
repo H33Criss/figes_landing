@@ -25,8 +25,8 @@ export const LandingPage = () => {
 
                             </div>
                             <div>
-                                <Image alt={''} width={200} height={400}
-                                    className="inline-block radius-pill mt-24 md:mt-0 p-8 md:p-0"
+                                <Image alt={''} width={400} height={600}
+                                    className="inline-block radius-pill mt-24 md:mt-0 p-8 md:p-0 mr-5"
                                     src="https://www.todoagua.es/wp-content/uploads/2022/04/tipos-de-tuberias-agua.jpg" />
 
                             </div>
