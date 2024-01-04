@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { Montserrat } from 'next/font/google'
 import './globals.css'
 import { Providers } from '@/components/providers/providers'
-import { Navbar } from '@/components'
+import { Footer, Navbar } from '@/components'
 
 const montserrat = Montserrat({ subsets: ['latin'] })
 
@@ -18,11 +18,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body className={montserrat.className}>
+      <body className={`${montserrat.className} overflow-y-scroll `}>
         <Providers>
-          <Navbar />
-          <div className="min-h-screen ">
+          <div className="dark min-h-screen text-foreground bg-background">
+            <Navbar />
             {children}
+            <Footer />
           </div>
         </Providers>
       </body>
