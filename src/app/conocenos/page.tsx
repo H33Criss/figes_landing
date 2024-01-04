@@ -1,3 +1,4 @@
+import { Conocenos } from "@/components";
 
 
 export const metadata = {
@@ -7,8 +8,8 @@ export const metadata = {
 
 export default function ConocenosPage() {
     return (
-        <div>
-            <h1>Conocenos Page</h1>
-        </div>
+        <>
+            <Conocenos />
+        </>
     );
 }
