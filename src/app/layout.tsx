@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body className={`${montserrat.className} overflow-y-scroll `}>
+      <body className={`${montserrat.className} overflow-y-auto `}>
         <Providers>
           <div className="dark min-h-screen text-foreground bg-background">
             <Navbar />

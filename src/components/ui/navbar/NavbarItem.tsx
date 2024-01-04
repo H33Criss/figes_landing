@@ -13,7 +13,7 @@ export const NavbarItem = ({ route, title }: INavbarItem) => {
     const pathName = usePathname();
 
     return (
-        <NavItem className='mx-2' isActive={pathName === route}>
+        <NavItem className={`mx-2 ${pathName === route && 'text-blue-600 font-bold'}`} >
             <Link color="foreground" href={route}>
                 {title}
             </Link>

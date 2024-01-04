@@ -7,11 +7,15 @@ const nextConfig = {
                 protocol: 'https'
             },
             {
-                hostname: 'user-images.githubusercontent.com',
+                hostname: 'www.arqhys.com',
                 protocol: 'https'
             },
             {
-                hostname: 'www.todoagua.es',
+                hostname: 'generaldefundicion.com',
+                protocol: 'https'
+            },
+            {
+                hostname: 'titulos.descubrelafp.org',
                 protocol: 'https'
             },
 

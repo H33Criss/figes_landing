@@ -10,12 +10,52 @@
 
 
 
-.clip-drop {
-  position: relative;
-  border-radius: 22% 10% 12% 34% / 48% 25% 24% 52%;
 
+
+@keyframes floatingAnimation {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-40px);
+  }
+}
+
+@keyframes floatingAnimation-n {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  80% {
+    transform: translateY(-15);
+  }
+
+  40% {
+    transform: translateY(-70px);
+  }
+}
+
+.animate-float-v1 {
+  animation: floatingAnimation-n 20s ease-in-out infinite;
+}
+
+.animate-float-v2 {
+  animation: floatingAnimation 25s ease-in-out infinite;
+}
+
+.animate-float-v3 {
+  animation: floatingAnimation 16s ease-in-out infinite;
 }
 
 .radius-pill {
   border-radius: 52% 48% 50% 50% / 39% 52% 48% 44%;
+}
+
+.radius-guitar {
+  border-radius: 75% 25% 25% 75% / 52% 34% 37% 42%;
 }
