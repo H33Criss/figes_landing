@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
 import { Montserrat } from 'next/font/google'
-import './globals.css'
 import { Providers } from '@/components/providers/providers'
 import { Footer, Navbar } from '@/components'
+import './globals.css';
+import 'animate.css';
 
 const montserrat = Montserrat({ subsets: ['latin'] })
 
@@ -18,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body className={`${montserrat.className} overflow-y-auto `}>
+      <body className={`${montserrat.className} overflow-y-auto overflow-x-hidden `}>
         <Providers>
           <div className="dark min-h-screen text-foreground bg-background">
             <Navbar />

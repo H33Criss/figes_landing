@@ -24,6 +24,18 @@
   }
 }
 
+@keyframes floatingAnimation-fast {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
 @keyframes floatingAnimation-n {
 
   0%,
@@ -42,6 +54,10 @@
 
 .animate-float-v1 {
   animation: floatingAnimation-n 20s ease-in-out infinite;
+}
+
+.animate-float-fast {
+  animation: floatingAnimation-fast 2s ease-in-out infinite;
 }
 
 .animate-float-v2 {

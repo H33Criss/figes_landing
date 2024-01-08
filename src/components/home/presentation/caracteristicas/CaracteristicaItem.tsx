@@ -9,7 +9,7 @@ export const CaracteristicaItem = ({ description, image, title }: Caracteristica
     return (
         <div className="relative group bg-gray-900 transition hover:z-[1] hover:shadow-2xl lg:hidden xl:block">
             <div className="relative p-8 space-y-8 rounded-lg transition duration-300 group-hover:bg-blue-950  group-hover:scale-90">
-                <img src={image} className="w-10" width="512" height="512" alt="burger illustration" />
+                <img src={image} className="w-20 h-20" alt="burger illustration" />
 
                 <div className="space-y-2">
                     <h5 className="text-xl text-gray-300 font-medium transition group-hover:text-blue-700">{title}</h5>
