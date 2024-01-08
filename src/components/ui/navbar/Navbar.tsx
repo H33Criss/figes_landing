@@ -5,7 +5,7 @@ import Link from "next/link";
 const navbarItems: INavbarItem[] = [
     { route: '/productos', title: 'Productos' },
     { route: '/conocenos', title: 'Conocénos' },
-    { route: '/contact', title: 'Contactanos' },
+    { route: '/contact', title: 'Contacto' },
     { route: '/cotizacion', title: 'Cotizar' },
 ];
 
