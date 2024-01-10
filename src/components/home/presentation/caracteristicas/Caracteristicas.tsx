@@ -6,7 +6,7 @@ const caracteristicasItems: CaracteristicaData[] = [
         image: '/wired-flat-409-tool.gif',
         // image: 'https://tailus.io/sources/blocks/stacked/preview/images/avatars/metal.png',
         title: 'Adaptabilidad',
-        description: 'Nuestros productos especializados serán adaptados para distintos clientes y distintas necesidades.',
+        description: 'Nuestros productos especializados son adaptados a distintos clientes y distintas necesidades.',
     },
     {
         image: '/wired-flat-726-wireless-connection.gif',

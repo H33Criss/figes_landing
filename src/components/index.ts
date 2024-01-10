@@ -10,6 +10,5 @@ export * from './productos/ProductsGrid'
 
 export * from './contact/Contact'
 
-export * from './custom/icons/MailIcon'
 
 export * from './conocenos/Conocenos'

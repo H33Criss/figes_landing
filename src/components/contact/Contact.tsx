@@ -1,8 +1,9 @@
-import React from 'react'
+'use client';
+
 import { CirclesRight } from './circles/CirclesRight'
 import { CirclesLeftBottom } from './circles/CirclesLeftBottom'
-import { Button, Input, Textarea } from '@nextui-org/react'
-import { MailIcon } from '..'
+import { FormContact } from './FormContact';
+import { ContactModal } from './ContactModal';
 
 export const Contact = () => {
     return (
@@ -39,39 +40,8 @@ export const Contact = () => {
                     </div>
                     <div className="w-full lg:w-1/2 xl:w-5/12 px-4">
                         <div className="bg-gray-900 relative rounded-lg p-8 sm:p-12 shadow-lg">
-                            <form>
-                                <div className="mb-6">
-                                    <div className="flex w-full flex-wrap md:flex-nowrap gap-4">
-                                        <Input type="text" name='name' label="Tu Nombre" />
-                                    </div>
-                                </div>
-                                <div className="mb-6">
-                                    <div className="flex w-full flex-wrap md:flex-nowrap gap-4">
-                                        <Input
-                                            // startContent={
-                                            //     <MailIcon className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
-                                            // } 
-                                            type="email" name='email' label="Email" />
-                                    </div>
-                                </div>
-                                <div className="mb-6">
-                                    <div className="flex w-full flex-wrap md:flex-nowrap gap-4">
-                                        <Input type="text" name='phone' label="Tu telefeno" />
-                                    </div>
-                                </div>
-                                <div className="mb-6">
-                                    <div className="flex w-full flex-wrap md:flex-nowrap gap-4">
-                                        <Textarea
-                                            label="Tu Mensaje"
-                                            placeholder="Escribe tu mensaje aqui"
-                                            className="w-full"
-                                        />
-                                    </div>
-                                </div>
-                                <div>
-                                    <Button color='primary' className='w-full py-5' variant='shadow'>Enviar mensaje</Button>
-                                </div>
-                            </form>
+                            <FormContact />
+                            <ContactModal />
                             <div>
                                 <span className="absolute -top-10 -right-9 z-[-1]">
                                     <svg
