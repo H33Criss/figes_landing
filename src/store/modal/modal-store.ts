@@ -7,7 +7,7 @@ import { create } from "zustand";
 export interface ModalData {
     modalName: string,
     isOpen: () => boolean,
-    onOpen: () => void,
+    onOpen: (message:string) => void,
     onOpenChange: () => void
 }
 

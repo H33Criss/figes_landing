@@ -6,9 +6,10 @@ import { useEffect, useState } from "react";
 import { IoCheckmarkCircle, IoInformationCircle } from "react-icons/io5";
 
 
-export const ContactModal = () => {
+export const ContactSuccessModal = () => {
 
-    const [isOpenModal, setIsOpenModal] = useState(false)
+    const [isOpenModal, setIsOpenModal] = useState<boolean>(false)
+    const [message, setMessage] = useState<string>('')
     const setModal = useModalStore(state => state.setModal)
 
     const isOpen = () => {
@@ -17,14 +18,15 @@ export const ContactModal = () => {
 
     const onOpenChange = () => {
         setIsOpenModal(!isOpenModal)
-
+        
     }
-    const onOpen = () => {
+    const onOpen = (message:string) => {
+        setMessage(message)
         setIsOpenModal(true)
     }
 
     useEffect(() => {
-        setModal({ isOpen, onOpen, onOpenChange, modalName: 'contact-modal' })
+        setModal({ isOpen, onOpen, onOpenChange, modalName: 'contact-success-modal' })
     }, [])
 
     return (
@@ -50,7 +52,7 @@ export const ContactModal = () => {
                             <ModalBody className="flex flex-col items-center">
                                 <IoCheckmarkCircle size={130} className='text-green-600 animate__animated animate__rubberBand' />
                                 <p className="text-lg font-bold">
-                                    !Correo enviado exitosamente!
+                                    {message}
                                 </p>
                                 <p className="mt-2 flex items-start justify-start">
                                     <IoInformationCircle size={40} className='text-blue-600 mr-1' />

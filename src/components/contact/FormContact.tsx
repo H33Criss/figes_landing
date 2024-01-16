@@ -2,7 +2,7 @@
 
 import { sendEmail } from '@/actions';
 import { useModalStore } from '@/store';
-import { Button, Input, Textarea, useDisclosure } from '@nextui-org/react'
+import { Button, Input, Select, SelectItem, Textarea, useDisclosure } from '@nextui-org/react'
 import clsx from 'clsx';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
@@ -14,30 +14,59 @@ interface FormInputs {
     subject: string,
 
 }
+
+const posiblesSubject=[
+    'Cotizacion de Productos',
+    'Venta personalizada',
+    'Consultar por producto especifico',
+    'Instalacion sistema acuicultura',
+];
 export const FormContact = () => {
     const getModal = useModalStore(state => state.getModal)
     const [sendingEmail, setSendingEmail] = useState<boolean>(false)
-    const { register, handleSubmit, formState: { errors, }, getValues } = useForm<FormInputs>();
+    const { register, handleSubmit,reset, formState: { errors, }, getValues } = useForm<FormInputs>();
 
     const onSubmit = async (data: FormInputs) => {
         setSendingEmail(true)
-        //TODO: falta mostrar un mensaje de error en caso de falla.
-        await sendEmail({ ...data, subject: 'Test Formulario' }).then(resp => {
-            getModal('contact-modal')?.onOpen()
+        await sendEmail({ ...data, phone:`+ 56 9 ${data.phone}` }).then(resp => {
+            getModal('contact-success-modal')?.onOpen(resp.message)
+            setSendingEmail(false)
+            reset();
+        }).catch((error:any)=>{
+            getModal('contact-error-modal')?.onOpen(error.message)
             setSendingEmail(false)
         })
     }
 
-
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
+            <div className="mb-6">
+                <div className="flex w-full flex-wrap md:flex-nowrap gap-4">
+                <Select
+                {...register('subject', { required: 'El Asunto es requerido' })}
+                    label="Asunto"
+                    placeholder="Selecciona un asunto"
+                    errorMessage={errors.subject?.message}
+                        isInvalid={errors.subject && true}
+                    
+                >          
+                    {
+                        posiblesSubject.map(subject =>(
+                            <SelectItem   key={subject} value={subject}>
+                            {subject}
+                            </SelectItem>
+                        ))
+                    }         
+                </Select>
+                </div>
+            </div>
             <div className="mb-6">
                 <div className="flex w-full flex-wrap md:flex-nowrap gap-4">
                     <Input
                         {...register('name', { required: 'El nombre es requerido' })}
                         errorMessage={errors.name?.message}
                         isInvalid={errors.name && true}
-                        type="text" name='name' label="Tu Nombre" />
+                        type="text" name='name' label="Nombre o Empresa" />
                 </div>
             </div>
             <div className="mb-6">
@@ -61,10 +90,34 @@ export const FormContact = () => {
             <div className="mb-6">
                 <div className="flex w-full flex-wrap md:flex-nowrap gap-4">
                     <Input
-                        {...register('phone', { required: 'El teléfono es requerido' })}
+                    startContent={
+                        <div className="pointer-events-none flex items-center">
+                          <span className="text-default-400 text-small">+56</span>
+                          <span className="ml-1 text-default-400 text-small">9</span>
+                        </div>
+                      }
+                        {...register('phone', { 
+                            required: 'El teléfono es requerido',
+                            minLength:{
+                                value:8,
+                                message:'Telefono invalido'
+                            }, 
+                            maxLength:{
+                                value:8,
+                                message:'Telefono invalido'
+                            }, 
+                            validate:(value)=>{
+                                if(isNaN(Number(value))) return 'Telefono no puede contener letras'
+                                return true;
+                            }
+                        
+                    })}
                         errorMessage={errors.phone?.message}
                         isInvalid={errors.phone && true}
-                        type="text" name='phone' label="Tu telefeno" />
+                        inputMode='numeric'
+                        type='tel'
+                        maxLength={8}
+                        name='phone' label="Telefeno de contacto" />        
                 </div>
             </div>
             <div className="mb-6">

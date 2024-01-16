@@ -3,7 +3,8 @@
 import { CirclesRight } from './circles/CirclesRight'
 import { CirclesLeftBottom } from './circles/CirclesLeftBottom'
 import { FormContact } from './FormContact';
-import { ContactModal } from './ContactModal';
+import { ContactSuccessModal } from './modals/ContactSuccessModal';
+import { ContactErrorModal } from './modals/ContactErrorModal';
 
 export const Contact = () => {
     return (
@@ -41,7 +42,8 @@ export const Contact = () => {
                     <div className="w-full lg:w-1/2 xl:w-5/12 px-4">
                         <div className="bg-gray-900 relative rounded-lg p-8 sm:p-12 shadow-lg">
                             <FormContact />
-                            <ContactModal />
+                            <ContactSuccessModal />
+                            <ContactErrorModal />
                             <div>
                                 <span className="absolute -top-10 -right-9 z-[-1]">
                                     <svg
