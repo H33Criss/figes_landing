@@ -39,7 +39,7 @@ export const FormContact = () => {
     }
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form  onSubmit={handleSubmit(onSubmit)}>
             <div className="mb-6">
                 <div className="flex w-full flex-wrap md:flex-nowrap gap-4">
                 <Select
@@ -84,7 +84,7 @@ export const FormContact = () => {
                         })}
                         errorMessage={errors.email?.message}
                         isInvalid={errors.email && true}
-                        type="email" name='email' label="Email" />
+                        type="email" name='email' label="Tu Correo electronico" />
                 </div>
             </div>
             <div className="mb-6">

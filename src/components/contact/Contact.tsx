@@ -5,6 +5,7 @@ import { CirclesLeftBottom } from './circles/CirclesLeftBottom'
 import { FormContact } from './FormContact';
 import { ContactSuccessModal } from './modals/ContactSuccessModal';
 import { ContactErrorModal } from './modals/ContactErrorModal';
+import { FaPhone, FaEnvelope, FaMapMarker,FaArrowRight } from 'react-icons/fa';
 
 export const Contact = () => {
     return (
@@ -12,35 +13,44 @@ export const Contact = () => {
         <section className="pt-20 px-5 md:px-48 lg:py-[120px] overflow-hidden relative z-10">
             <div className="container">
                 <div className="flex flex-wrap lg:justify-between -mx-4">
-                    <div className="w-full lg:w-1/2 xl:w-6/12 px-4">
+                    <div className="animate__animated animate__lightSpeedInLeft w-full lg:w-1/2 xl:w-6/12 px-4">
                         <div className="max-w-[570px] mb-12 lg:mb-0">
                             <span className="block mb-4 text-base text-primary font-semibold">
-                                ¡Contactanos!
+                                ¡Contáctanos!
                             </span>
-                            <h2
-                                className="
-                  text-dark
-                  mb-6
-                  uppercase
-                  font-bold
-                  text-[32px]
-                  sm:text-[40px]
-                  lg:text-[36px]
-                  xl:text-[40px]
-                  "
-                            >
+                            <h2 className="text-dark mb-6 uppercase font-bold text-[32px] sm:text-[40px] lg:text-[36px] xl:text-[40px]">
                                 Ponte en contacto con nosotros
                             </h2>
-                            <p className="text-base text-body-color leading-relaxed mb-9">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                eius tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                                adiqua minim veniam quis nostrud exercitation ullamco
+                            <h3 className="font-semibold text-xl">¿Has visto un producto que necesitas?</h3>
+                            <h4 className="mb-10">📨 ¡Contáctanos! 🤳</h4>
+                            <p className="text-base text-body-color leading-relaxed mb-6">
+                                Trataremos de contactarte lo más rápido posible.
                             </p>
-
+                            <div className="flex items-center mb-6">
+                                <FaPhone className="text-primary mr-3" />
+                                <span className="text-base">Teléfono de contacto: +123 456 789</span>
+                            </div>
+                            <div className="flex items-center mb-6">
+                                <FaEnvelope className="text-primary mr-3" />
+                                <span className="text-base">Correo electrónico: info@example.com</span>
+                            </div>
+                            <div className="flex items-center mb-9">
+                                <FaMapMarker className="text-primary mr-3" />
+                                <span className="text-base">Ubicación: Ciudad, País</span>
+                            </div>
+                            <div className="flex items-center mb-9">
+                                <FaArrowRight className="text-primary mr-3" />
+                                <span className="text-base">
+                                    ¿Prefieres otra opción?{' '}
+                                    <span className="text-link font-bold cursor-pointer">
+                                        Contacta con nosotros a través del formulario.
+                                    </span>
+                                </span>
+                            </div>
                         </div>
                     </div>
                     <div className="w-full lg:w-1/2 xl:w-5/12 px-4">
-                        <div className="bg-gray-900 relative rounded-lg p-8 sm:p-12 shadow-lg">
+                        <div className="animate__animated animate__fadeIn bg-gray-900 relative rounded-lg p-8 sm:p-12 shadow-lg">
                             <FormContact />
                             <ContactSuccessModal />
                             <ContactErrorModal />
