@@ -19,6 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
+      {/* TODO: Cambiar el estilo del scroll */}
       <body className={`${montserrat.className} overflow-y-auto overflow-x-hidden `}>
         <Providers>
           <div className="dark min-h-screen text-foreground bg-background">

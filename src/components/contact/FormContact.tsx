@@ -21,6 +21,7 @@ export const FormContact = () => {
 
     const onSubmit = async (data: FormInputs) => {
         setSendingEmail(true)
+        //TODO: falta mostrar un mensaje de error en caso de falla.
         await sendEmail({ ...data, subject: 'Test Formulario' }).then(resp => {
             getModal('contact-modal')?.onOpen()
             setSendingEmail(false)

@@ -42,7 +42,7 @@ export const GamaDeProductos = () => {
                             <div className="relative flex flex-col min-w-0 break-words bg-gray-800 w-full mb-8 shadow-lg rounded-lg">
                                 <div className="px-4 py-5 flex-auto">
                                     <div className="text-white  p-3 text-center inline-flex items-center justify-center ">
-                                        <img src='/piezas.jpg' className='h-36  w-36 object-cover  rounded-full ' />
+                                        <img src='/imgs/piezas.jpg' className='h-36  w-36 object-cover  rounded-full ' />
                                     </div>
                                     <h6 className="text-xl font-semibold">Componentes Piezas</h6>
                                     <p className="mt-2 mb-4 text-blueGray-500">
@@ -56,7 +56,7 @@ export const GamaDeProductos = () => {
                             <div className="relative flex flex-col min-w-0 break-words bg-gray-800 w-full mb-8 shadow-lg rounded-lg">
                                 <div className="px-4 py-5 flex-auto">
                                     <div className="text-white p-3 text-center inline-flex items-center justify-center mb-5 ">
-                                        <img src='/img_tuberias-pvc.jpg' className='h-36  w-36 object-cover rounded-full' />
+                                        <img src='/imgs/img_tuberias-pvc.jpg' className='h-36  w-36 object-cover rounded-full' />
                                     </div>
                                     <h6 className="text-xl font-semibold">Tuberias y Segmentos</h6>
                                     <p className="mt-2 mb-4 text-blueGray-500">
@@ -70,7 +70,7 @@ export const GamaDeProductos = () => {
                             <div className="relative flex flex-col min-w-0 break-words bg-gray-800 w-full mb-8 shadow-lg rounded-lg">
                                 <div className="px-4 py-5 flex-auto">
                                     <div className="text-white p-3 text-center inline-flex items-center justify-center  mb-5 ">
-                                        <img src='/acuicultura.jpg' className='h-36  w-36 object-cover rounded-full' />
+                                        <img src='/imgs/acuicultura.jpg' className='h-36  w-36 object-cover rounded-full' />
                                     </div>
                                     <h6 className="text-xl font-semibold">Acuicultura</h6>
                                     <p className="mt-2 mb-4 text-blueGray-500">

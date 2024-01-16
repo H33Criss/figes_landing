@@ -3,6 +3,7 @@ import { ProductPresentationData, ProductPresentationItem } from './ProductPrese
 import { IoPeopleOutline } from 'react-icons/io5';
 import { GrTest } from "react-icons/gr";
 import { GiBlackBook } from "react-icons/gi";
+import Link from 'next/link';
 
 
 const productsPresentationItems: ProductPresentationData[] = [
@@ -37,9 +38,11 @@ export const ProductsPresentation = () => {
                     ))
                 }
             </div>
-            <div className="w-full rounded-b-xl flex-col md:flex-row bg-blue-800 shadow-md  py-10 px-5 md:px-20 flex justify-between items-center">
-                <p className=" textWhite"> <span className="text-4xl font-medium">¿Mas productos?</span> <br /> <span className="textLg">¡Aun tenemos una gran variedad! </span></p>
-                <button className="px-5 py-3  font-medium text-slate-700 shadow-xl  hover:bgWhite duration-150  bg-yellow-400">Ver mas productos </button>
+            <div className="w-full rounded-b-xl flex-col md:flex-row bg-blue-900 shadow-md  py-10 px-5 md:px-20 flex justify-between items-center">
+                <p className=" textWhite"> <span className="text-4xl font-medium">¿Mas productos?</span> <br /> <span className="textLg">¡Aun tenemos una gran cartelera! </span></p>
+                <Link href={'/productos'} className="px-5 py-3 hover:cursor-pointer hover:scale-105 hover:bg-blue-700 hover:shadow-sm   font-medium text-white shadow-xl  hover:bgWhite duration-150  bg-gray-800 rounded-lg">
+                    Ver mas productos
+                </Link>
             </div>
 
         </div>

@@ -3,25 +3,25 @@ import { CaracteristicaData, CaracteristicaItem } from './CaracteristicaItem';
 
 const caracteristicasItems: CaracteristicaData[] = [
     {
-        image: '/wired-flat-409-tool.gif',
+        image: '/svgs/wired-flat-409-tool.gif',
         // image: 'https://tailus.io/sources/blocks/stacked/preview/images/avatars/metal.png',
         title: 'Adaptabilidad',
         description: 'Nuestros productos especializados son adaptados a distintos clientes y distintas necesidades.',
     },
     {
-        image: '/wired-flat-726-wireless-connection.gif',
+        image: '/svgs/wired-flat-726-wireless-connection.gif',
         // image: 'https://tailus.io/sources/blocks/stacked/preview/images/avatars/burger.png',
         title: 'Comunicacion',
         description: 'Estamos en una constante comunicacion atendiendo tus necesidades.',
     },
     {
-        image: '/wired-flat-1754-nails-screw-carpentry.gif',
+        image: '/svgs/wired-flat-1754-nails-screw-carpentry.gif',
         // image: 'https://tailus.io/sources/blocks/stacked/preview/images/avatars/trowel.png',
         title: 'Personalizacion',
         description: 'Personalizamos nuestra propuesta en funcion de tu negocio y necesidad.',
     },
     {
-        image: '/wired-flat-1979-hookah.gif',
+        image: '/svgs/wired-flat-1979-hookah.gif',
         // image: 'https://tailus.io/sources/blocks/stacked/preview/images/avatars/package-delivery.png',
         title: 'Desarrollo',
         description: 'Creamos nuevas piezas que se puedan adecuar a tu caso particular',

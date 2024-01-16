@@ -1,3 +1,4 @@
+import { Cotizacion } from "@/components";
 
 
 
@@ -8,8 +9,8 @@ export const metadata = {
 
 export default function CotizacionPage() {
     return (
-        <div>
-            <h1>Cotizacion Page</h1>
+        <div className="min-h-screen">
+            <Cotizacion />
         </div>
     );
 }
